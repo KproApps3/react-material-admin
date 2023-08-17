@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import {
   Grid,
   LinearProgress,
@@ -42,10 +42,27 @@ const PieChartData = [
   { name: "Group D", value: 200, color: "success" },
 ];
 
+
+
+
+
 export default function Dashboard(props) {
   var classes = useStyles();
   var theme = useTheme();
 
+
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+     fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+        .then((response) => response.json())
+        .then((data) => {
+           console.log(data);
+           setPosts(data);
+        })
+        .catch((err) => {
+           console.log(err.message);
+        });
+  }, []);
   // local
   var [mainChartState, setMainChartState] = useState("monthly");
 
@@ -450,6 +467,8 @@ function getRandomData(length, min, max, multiplier = 10, maxDiff = 10) {
 }
 
 function getMainChartData() {
+
+ 
   var resultArray = [];
   var tablet = getRandomData(31, 3500, 6500, 7500, 1000);
   var desktop = getRandomData(31, 1500, 7500, 7500, 1500);

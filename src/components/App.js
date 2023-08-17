@@ -25,7 +25,7 @@ export default function App() {
           render={() => <Redirect to="/app/dashboard" />}
         />
         <PrivateRoute path="/app" component={Layout} />
-        <PublicRoute path="/dashboard" component={Login} />
+        <PublicRoute path="/login" component={Login} />
         <Route component={Error} />
       </Switch>
     </HashRouter>
