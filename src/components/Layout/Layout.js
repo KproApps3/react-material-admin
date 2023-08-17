@@ -73,7 +73,7 @@ function Layout(props) {
               alignItems={"center"}
               justifyContent="space-between"
             >
-              <div>
+              {/* <div>
                 <Link
                   color={'primary'}
                   href={'https://flatlogic.com/'}
@@ -139,7 +139,7 @@ function Layout(props) {
                     />
                   </IconButton>
                 </Link>
-              </div>
+              </div> */}
             </Box>
           </div>
         </>
