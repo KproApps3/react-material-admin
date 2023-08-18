@@ -1,3 +1,4 @@
+import { green } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles(theme => ({
@@ -49,6 +50,12 @@ export default makeStyles(theme => ({
     paddingLeft: theme.spacing(2) + 30,
   },
   sectionTitle: {
+    marginLeft: theme.spacing(4.5),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+  },
+  toptitle: {
+    color: "#03a9f4",
     marginLeft: theme.spacing(4.5),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),

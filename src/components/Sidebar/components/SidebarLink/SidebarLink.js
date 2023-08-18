@@ -36,7 +36,20 @@ export default function SidebarLink({
     link &&
     (location.pathname === link || location.pathname.indexOf(link) !== -1);
 
-  if (type === "title")
+  if (label === "Medical App"){
+
+ 
+    return (
+      <Typography
+        className={classnames(classes.linkText, classes.toptitle, {
+          [classes.linkTextHidden]: !isSidebarOpened,
+        })}
+      >
+        {label}
+      </Typography>
+    ) 
+  
+  } else if (type === "title"){
     return (
       <Typography
         className={classnames(classes.linkText, classes.sectionTitle, {
@@ -45,7 +58,9 @@ export default function SidebarLink({
       >
         {label}
       </Typography>
-    );
+    ) 
+    };
+    
 
   if (type === "divider") return <Divider className={classes.divider} />;
   if (link && link.includes('http')) {
