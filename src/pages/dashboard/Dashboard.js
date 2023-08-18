@@ -58,8 +58,7 @@ export default function Dashboard(props) {
         .then((data) => {
            console.log(data);
            setPosts(data);
-        })
-        .catch((err) => {
+        }).catch((err) => {
            console.log(err.message);
         });
   }, []);
@@ -87,7 +86,7 @@ export default function Dashboard(props) {
               <Grid container item alignItems={"center"}>
                 <Grid item xs={6}>
               <Typography size="xl" weight="medium" noWrap>
-                12, 678
+              122,567
               </Typography>
                 </Grid>
                 <Grid item xs={6}>
