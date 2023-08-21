@@ -33,14 +33,14 @@ function Login(props) {
   var [error, setError] = useState(null);
   var [activeTabId, setActiveTabId] = useState(0);
   var [nameValue, setNameValue] = useState("");
-  var [loginValue, setLoginValue] = useState("admin@flatlogic.com");
+  var [loginValue, setLoginValue] = useState("admin@kproapps.com");
   var [passwordValue, setPasswordValue] = useState("password");
 
   return (
     <Grid container className={classes.container}>
       <div className={classes.logotypeContainer}>
-        <img src={logo} alt="logo" className={classes.logotypeImage} />
-        <Typography className={classes.logotypeText}>Material Admin</Typography>
+        <img src="https://www.kproapps.com/assets/img/kproapps-logo.png" alt="logo" className={classes.logotypeImage} />
+        <Typography className={classes.logotypeText}>Medical Demo Dash</Typography>
       </div>
       <div className={classes.formContainer}>
         <div className={classes.form}>
@@ -245,7 +245,7 @@ function Login(props) {
           )}
         </div>
         <Typography color="primary" className={classes.copyright}>
-        © 2014-{new Date().getFullYear()} <a style={{ textDecoration: 'none', color: 'inherit' }} href="https://flatlogic.com" rel="noopener noreferrer" target="_blank">Flatlogic</a>, LLC. All rights reserved.
+        © 2014-{new Date().getFullYear()} <a style={{ textDecoration: 'none', color: 'inherit' }} href="https://kproapps.com" rel="noopener noreferrer" target="_blank">kproapps</a>, PTY LMT. All rights reserved.
         </Typography>
       </div>
     </Grid>
